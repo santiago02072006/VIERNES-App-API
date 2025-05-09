@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { AppProvider } from './contexto/contexto'
 
 import './App.css'
 
@@ -15,6 +16,7 @@ function App() {
 
 
   return (
+    <AppProvider> 
     <Router>
       <Menu />
 
@@ -28,6 +30,7 @@ function App() {
 
       </Routes>
     </Router>
+    </AppProvider>
   );
 }
 
